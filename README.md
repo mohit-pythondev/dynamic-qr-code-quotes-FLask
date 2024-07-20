@@ -1,23 +1,24 @@
 # Random Quote QR Code Generator
 
-This project is a web application built with Flask that generates and displays QR codes for random motivational quotes. Each time you visit the page or request a new quote, a fresh quote is displayed along with its corresponding QR code.
+This project is a Flask-based web application that generates and displays QR codes for random motivational quotes. Users can also add their own quotes to the application.
 
 ## Features
 
-- Displays a random motivational quote on the main page.
-- Generates and displays a QR code for the current quote.
-- Allows users to get a new quote and QR code with a single click.
+- **Random Quote Display**: Shows a random motivational quote on the main page.
+- **QR Code Generation**: Generates and displays a QR code for the current quote.
+- **Add New Quotes**: Allows users to add new quotes which are then saved and can be displayed with a QR code.
 
 ## Getting Started
 
 ### Prerequisites
 
-Make sure you have Python 3.7+ installed on your system. You also need to install the required Python packages.
+- **Python 3.7+**: Make sure Python is installed on your system.
+- **pip**: Python package installer.
 
 ### Installation
 
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/mohit-pythondev/dynamic-qr-code-quotes.git
-   cd quote-qr-generator
+   git clone https://github.com/mohit-pythondev/dynamic-qr-code-quotes-FLask.git
+   cd dynamic-qr-code-quotes-FLask
