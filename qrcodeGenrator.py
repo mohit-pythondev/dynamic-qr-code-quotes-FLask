@@ -1,4 +1,4 @@
-from flask import Flask, render_template, make_response, url_for, redirect
+from flask import Flask, render_template, request, redirect, url_for, make_response
 import json
 import random
 import qrcode
@@ -50,6 +50,26 @@ def qr_code(quote):
 @app.route('/new-quote')
 def new_quote():
     return redirect('/')
+
+@app.route('/add-quote', methods=['GET', 'POST'])
+def add_quote():
+    if request.method == 'POST':
+        new_quote = request.form.get('quote')
+        if new_quote:
+            # Load existing quotes
+            with open('motivational_quotes.json', 'r') as file:
+                data = json.load(file)
+            
+            # Add the new quote
+            data['quotes'].append({'quote': new_quote})
+            
+            # Save the updated quotes
+            with open('motivational_quotes.json', 'w') as file:
+                json.dump(data, file, indent=4)
+            
+            return redirect('/')
+    
+    return render_template('add_quote.html')
 
 if __name__ == '__main__':
     app.run(debug=True)

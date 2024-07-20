@@ -20,3 +20,10 @@ body {
     width: 200px;
     height: 200px;
 }
+textarea {
+    width: 100%;
+    max-width: 500px;
+}
+button {
+    margin-top: 10px;
+}

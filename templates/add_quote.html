@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Quote</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Add New Quote</h1>
+        <form action="{{ url_for('add_quote') }}" method="post">
+            <textarea name="quote" rows="4" cols="50" placeholder="Enter your quote here..." required></textarea>
+            <br>
+            <button type="submit">Add Quote</button>
+        </form>
+        <br>
+        <a href="{{ url_for('index') }}">Back to Home</a>
+    </div>
+</body>
+</html>
