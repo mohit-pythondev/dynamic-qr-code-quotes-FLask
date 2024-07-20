@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Quote QR Code</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Random Quote</h1>
+        <p>{{ quote }}</p>
+        <img src="{{ url_for('qr_code', quote=quote) }}" alt="QR Code" class="qr-code">
+        <br>
+        <a href="{{ url_for('new_quote') }}">Get New Quote</a>
+    </div>
+</body>
+</html>

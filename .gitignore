@@ -1,0 +1,28 @@
+# Python bytecode files
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+
+# Virtual environment
+venv/
+ENV/
+env/
+
+# Flask instance folder
+instance/
+
+# VSCode settings
+.vscode/
+
+# MacOS Finder
+.DS_Store
+
+# Windows file system
+Thumbs.db
+
+# PyCharm settings
+.idea/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
